@@ -7,14 +7,14 @@ exports.dbConfig = void 0;
 const mongoose_1 = require("mongoose");
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const URL = process.env.PORT;
+const URL = process.env.DATABASE_URL;
 const dbConfig = () => {
     try {
         return (0, mongoose_1.connect)(URL)
             .then(() => {
             console.log("database connected...");
         })
-            .catch((err) => console.error());
+            .catch(() => console.error());
     }
     catch (error) {
         return error;

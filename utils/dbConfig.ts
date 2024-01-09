@@ -11,7 +11,7 @@ export const dbConfig = () => {
       .then(() => {
         console.log("database connected...");
       })
-      .catch((err) => console.error());
+      .catch(() => console.error());
   } catch (error) {
     return error;
   }

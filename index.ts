@@ -17,6 +17,7 @@ const server = app.listen(port, () => {
   console.clear();
   console.log("first");
   dbConfig();
+//   console.log(dbConfig())
 });
 
 process.on("uncaughtException", (err: Error) => {
