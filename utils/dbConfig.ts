@@ -3,7 +3,7 @@ import env from "dotenv";
 
 env.config();
 
-const URL: string = process.env.PORT!;
+const URL: string = process.env.DATABASE_URL!;
 
 export const dbConfig = () => {
   try {
