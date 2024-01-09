@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn index.ts",
+    "build": "rm -rf test && tsc",
+    "start": "npm run build && node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
